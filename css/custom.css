@@ -1,0 +1,302 @@
+/*-- TABLE OF CONTENTS -----------
+
+    1. NAVBAR
+    2. HEADER
+    3. ABOUT ME/SKILLS
+    4. PORTFOLIO
+    5. CONTACT
+    6. FOOTER
+    7. MISC
+        7A. BACK TO TOP BUTTON
+        8. TYPING ANIMATION
+*/
+
+html,
+body {
+    background-color: #EEF0EB;
+    height: 100%;
+    Abackground: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/sayagata-400px.png);
+    position: relative;
+}
+
+hr {
+    border-color: #A14A76;
+    border-width: 3px;
+    max-width: 50px;
+}
+
+.btn-primary {
+    background-color: #A14A76;
+    border-color: #523249
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:focus {
+    background-color: #523249;
+}
+
+
+/*-- 1. NAVBAR --*/
+
+
+/*Animation for nav */
+
+.navbar-default,
+.navbar-transparent {
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.navbar-default {
+    background-color: #020300;
+    color: #FFF;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    color: #A14A76;
+    border-bottom: 2px solid #A14A76;
+    background-color: inherit;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #A14A76;
+    border-bottom: 2px solid #A14A76;
+    background: inherit;
+}
+
+.navbar-transparent {
+    padding-top: 15px;
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #777;
+}
+
+.navbar-transparent .navbar-nav>li>a,
+.navbar-transparent .navbar-brand {
+    color: #000;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-default .btn-primary {
+    margin-top: 10px;
+}
+
+
+/* --2. HEADER -- */
+
+header {
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://static.pexels.com/photos/6471/woman-hand-smartphone-desk.jpg);
+}
+
+.header-section {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: rgba(211, 211, 211, .6);
+}
+
+.header-section h1 {
+    font-size: 54px;
+}
+
+@media (min-width: 768px) {
+    header {
+        min-height: 80%;
+    }
+}
+
+
+/*  -- 3. ABOUT ME/SKILLS -- */
+
+.about-me {
+    background-color: #A14A76;
+    color: white;
+}
+
+.about-me hr {
+    border-color: white;
+}
+
+.skills {
+    max-width: 200px;
+    padding: 0 30px;
+}
+
+@media (min-width: 768px) {
+    .about {
+        border-right: 1px solid #fff;
+    }
+    .about,
+    .skills {
+        margin: 50px 0;
+    }
+}
+
+.skills i {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+
+/*  -- 4.PORTFOLIO -- */
+
+.portfolio-item {
+    position: relative;
+    /*needs to be relative so hover doesn't go outside;*/
+    margin: 0 auto;
+}
+
+.portfolio-hover {
+    background-color: rgba(161, 74, 118, .9);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all .45s;
+    transition: all .45s;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: white;
+}
+
+.portfolio-hover a {
+    font-size: 2em;
+    color: white;
+}
+
+.portfolio-hover:hover {
+    opacity: 1;
+}
+
+.portfolio-caption {
+    background-color: #fff;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (min-width: 992px) {
+    .portfolio {
+        margin: 50px 0;
+    }
+}
+
+
+/* -- 5. CONTACT -- */
+
+.contact {
+    width: 100%;
+    background: #fff;
+    margin: 20px 0;
+}
+
+
+/* -- 6.FOOTER -- */
+
+.footer {
+    background-color: #020300;
+    padding: 20px;
+}
+
+
+/* -- 7A. BACK TO TOP -- */
+
+#back-to-top {
+    border-radius: 50%;
+    line-height: 48px;
+    background-color: #A14A76;
+    display: block;
+    position: fixed;
+    bottom: 50px;
+    text-align: center;
+    width: 50px;
+    right: 30px;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    color: #FFF;
+    font-size: 11px;
+    height: 50px;
+    z-index: 99999;
+    cursor: pointer;
+}
+
+#back-to-top a {
+    color: #fff;
+}
+
+#back-to-top:hover {
+    background-color: #523249
+}
+
+#back-to-top i {
+    font-size: 16px;
+}
+
+#back-to-top.active {
+    opacity: 1;
+}
+
+
+/* -- 78. TYPING ANIMATION -- */
+
+.typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
