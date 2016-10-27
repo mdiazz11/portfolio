@@ -41,26 +41,12 @@ $(window).scroll(function () {
 
 
 $('body').scrollspy({
-    target: '#navbar'
+    target: '#navbar',
+    offset: 50
 });
 
-/*
+
 //Scrolling animation
-$('a[href*="#"]:not([href="#"])').click(function () {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-            $('html, body').animate({
-                scrollTop: target.offset().top
-            }, 1000);
-            return false;
-        }
-    }
-});
-
-*/
-
 $('.navbar a, a.back-to-top').click(function () {
     var scrollPos = $('body').find($(this).attr('href')).offset().top;
     $('html,body').animate({

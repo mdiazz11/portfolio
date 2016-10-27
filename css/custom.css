@@ -4,18 +4,18 @@
     2. HEADER
     3. ABOUT ME/SKILLS
     4. PORTFOLIO
-    5. CONTACT
-    6. FOOTER
-    7. MISC
-        7A. BACK TO TOP BUTTON
-        8. TYPING ANIMATION
+    5. RESUME
+    6. CONTACT
+    7. FOOTER
+    8. MISC
+        A. BACK TO TOP BUTTON
+        B. TYPING ANIMATION
 */
 
 html,
 body {
     background-color: #EEF0EB;
     height: 100%;
-    Abackground: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/sayagata-400px.png);
     position: relative;
 }
 
@@ -135,31 +135,20 @@ header {
 
 .about-me {
     background-color: #A14A76;
+    font-size: 1.2em;
     color: white;
+    line-height: 2em;
+    padding: 35px 150px 35px;
+}
+
+@media (max-width: 767px) {
+    .about-me {
+        padding: 10px 50px;
+    }
 }
 
 .about-me hr {
     border-color: white;
-}
-
-.skills {
-    max-width: 200px;
-    padding: 0 30px;
-}
-
-@media (min-width: 768px) {
-    .about {
-        border-right: 1px solid #fff;
-    }
-    .about,
-    .skills {
-        margin: 50px 0;
-    }
-}
-
-.skills i {
-    font-size: 20px;
-    margin-right: 20px;
 }
 
 
@@ -169,6 +158,16 @@ header {
     position: relative;
     /*needs to be relative so hover doesn't go outside;*/
     margin: 0 auto;
+}
+
+.portfolio-item img {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .portfolio-item img {
+        height: 200px;
+    }
 }
 
 .portfolio-hover {
@@ -191,9 +190,13 @@ header {
     color: white;
 }
 
-.portfolio-hover a {
+.portfolio-hover {
     font-size: 2em;
     color: white;
+}
+
+.portfolio-hover a {
+    color: #fff;
 }
 
 .portfolio-hover:hover {
@@ -212,17 +215,88 @@ header {
     }
 }
 
+@media (max-width: 991px) {
+    .portfolio-caption {
+        margin-bottom: 25px;
+    }
+}
 
-/* -- 5. CONTACT -- */
+
+/*  -- 5.RESUME -- */
+
+#resume {
+    background-color: #fff;
+    margin-bottom: 50px;
+    padding: 50px 10px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    #resume {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+#download-resume {
+    border-radius: 5px;
+    line-height: 48px;
+    border: 3px solid #A14A76;
+    text-align: center;
+    width: 50px;
+    right: 30px;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    color: #A14A76;
+    height: 50px;
+    cursor: pointer;
+}
+
+#download-resume:hover {
+    background-color: #A14A76;
+    color: #fff;
+}
+
+#resume-text {
+    color: #A14A76;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.resume-position,
+.college-name {
+    color: #A14A76;
+    font-size: 1.11em;
+    font-weight: bold;
+}
+
+.resume-skills li {
+    width: 50%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .sidebar,
+    .main {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+.main .page-header {
+    margin-top: 0;
+}
+
+
+/* -- 6. CONTACT -- */
 
 .contact {
     width: 100%;
     background: #fff;
-    margin: 20px 0;
 }
 
 
-/* -- 6.FOOTER -- */
+/* -- 7.FOOTER -- */
 
 .footer {
     background-color: #020300;
@@ -230,7 +304,7 @@ header {
 }
 
 
-/* -- 7A. BACK TO TOP -- */
+/* -- 8A. BACK TO TOP -- */
 
 #back-to-top {
     border-radius: 50%;
@@ -269,7 +343,7 @@ header {
 }
 
 
-/* -- 78. TYPING ANIMATION -- */
+/* -- 8B. TYPING ANIMATION -- */
 
 .typed-cursor {
     opacity: 1;
